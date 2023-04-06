@@ -40,6 +40,11 @@ def main():
             tasks.insert(-1, new_task)
             tasks_entry.delete(0, tk.END)
             tasks_var.set(', '.join(tasks))
+            
+    # Function to clear tasks
+    def clear_tasks():
+        tasks[1:-1] = []  # Clear tasks, but keep "Start" and "End"
+        tasks_var.set(', '.join(tasks))
 
     # Bind the Enter/Return key to the add_task function
     tasks_entry.bind("<Return>", add_task)
@@ -61,6 +66,10 @@ def main():
     # Create a button to generate the workflow diagram
     create_button = tk.Button(root, text="Create Workflow Diagram", command=generate_diagram)
     create_button.grid(row=2, column=0, columnspan=3, padx=10, pady=10)
+    
+    # Create a button to clear the tasks list
+    clear_button = tk.Button(root, text="Clear Tasks", command=clear_tasks)
+    clear_button.grid(row=3, column=0, columnspan=3, padx=10, pady=10)
 
     # Run the main loop
     root.mainloop()

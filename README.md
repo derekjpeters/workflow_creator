@@ -5,14 +5,15 @@ This Python script allows you to create a simple workflow diagram using `tkinter
 ## Dependencies
 
 - Python 3
-- tkinter
+- tkinter - Is installed
 - graphviz
 
-To install the `graphviz` library, run the following command:
+To install the `graphviz` & library, run the following command:
 
-## Usage
+## Install
 - pip3 install graphviz
-- python3 workflow_diagram_creator.py
+
+Note: If you are using a Windows system and the `pip3` command is not recognized, try using `pip` instead:
 
 The application window will open. Enter the task names in the "Tasks:" input field and press the "+" button or the "Enter" key to add them to the workflow.
 
