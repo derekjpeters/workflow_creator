@@ -1,0 +1,11 @@
+digraph workflow {
+	A [label=Start]
+	B [label="Task 1"]
+	C [label="Task 2"]
+	D [label="Task 3"]
+	E [label=End]
+	A -> B
+	B -> C
+	C -> D
+	D -> E
+}
