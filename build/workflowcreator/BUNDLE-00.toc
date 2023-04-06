@@ -1,0 +1,3 @@
+([('workflowcreator',
+   '/Users/derek.peters/Workflow DP/workflow_creator/dist/workflowcreator',
+   'EXECUTABLE')],)
