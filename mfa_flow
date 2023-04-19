@@ -1,0 +1,45 @@
+digraph mfa_flow {
+	rankdir=TB size="8,5"
+	node [shape=rectangle]
+	A [label="Premier Success Entitlement"]
+	node [shape=diamond]
+	B [label="Case Queue"]
+	node [shape=rectangle]
+	C [label="CSM will be assigned Case"]
+	D [label="CSM will reach out to the customer"]
+	E [label="CSM will discuss MFA with the Cloud Admin at the BSP"]
+	F [label="CSM will review the form with the Cloud Admin at the BSP"]
+	G [label="APM will be assigned Case"]
+	H [label="APM will reach out to the customer"]
+	I [label="APM will discuss MFA with the Cloud Admin at the BSP"]
+	J [label="APM will review the form with the Cloud Admin at the BSP"]
+	node [shape=diamond]
+	K [label="Does the BSP use third party for cloud support?"]
+	L [label="Does the BSP use third party for cloud support?"]
+	node [shape=rectangle]
+	M [label="CSM Updates the Case that 3rd Party is Used"]
+	N [label="CSM Open Question Mark Box Yellow"]
+	O [label="APM Updates the Case that 3rd Party is Used"]
+	P [label="APM Open Question Mark Box Yellow"]
+	node [shape=rectangle]
+	Q [label="CSM Will get the date the BSP will fill out the form and update the case"]
+	R [label="APM Will get the date the BSP will fill out the form and update the case"]
+	A -> B
+	B -> C
+	C -> D
+	D -> E
+	E -> F
+	F -> K
+	B -> G
+	G -> H
+	H -> I
+	I -> J
+	J -> L
+	K -> M
+	M -> N
+	K -> O
+	O -> P
+	K -> Q
+	L -> Q
+	L -> R
+}
