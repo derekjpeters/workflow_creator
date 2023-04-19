@@ -1,7 +1,7 @@
 # mfaflow.py
 from graphviz import Digraph
 
-dot = Digraph('mfa_flow', format='pdf')
+dot = Digraph('mfa_flow', format='png')
 
 dot.attr(rankdir='TB', size='8,5')
 
